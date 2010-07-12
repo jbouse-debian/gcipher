@@ -1,3 +1,18 @@
+gcipher (1.0-4) unstable; urgency=low
+
+  * debian/patches/002_bts_532130.diff: Correct spelling of Ceasar to
+    Caesar (Closes: #532130)
+  * debian/patches/003_bts_531183.diff: Remove deprecated GTK function
+    calls (Closes: #531183)
+  * Add Douglas Gemignani as an uploader (Closes: #559244, #557268) -
+    thanks to Sandro Tosi <morph@debian.org>
+  * debian/rules, debian/control: Clean-up lintian issues in package
+  * debian/control: Add VCS resource entries
+  * Accept NMUs done previously against 1.0-3 - thanks to Pierre Habouzit
+    <madcoder@debian.org> & Colin Watson <cjwatson@debian.org>
+
+ -- Jeremy T. Bouse <jbouse@debian.org>  Mon, 12 Jul 2010 13:00:15 -0400
+
 gcipher (1.0-3.2) unstable; urgency=low
 
   * Non-maintainer upload.
