@@ -1,0 +1,66 @@
+diff -ruN gcipher-1.0-old/gcipher.1 gcipher-1.0/gcipher.1
+--- gcipher-1.0-old/gcipher.1	2003-06-20 18:22:05.000000000 -0400
++++ gcipher-1.0/gcipher.1	2010-07-12 10:21:27.000000000 -0400
+@@ -48,8 +48,8 @@
+ \fBGie\fR
+ a simple cipher doable by hand; no key is required
+ .TP
+-\fBCeasar\fR
+-Julius Ceasar's code; no key is required
++\fBCaesar\fR
++Julius Caesar's code; no key is required
+ .TP
+ \fBRot\fR
+ linear rotation; the amount of the rotation is given by the key which must be a
+diff -ruN gcipher-1.0-old/src/cipher/Caesar.py gcipher-1.0/src/cipher/Caesar.py
+--- gcipher-1.0-old/src/cipher/Caesar.py	1969-12-31 19:00:00.000000000 -0500
++++ gcipher-1.0/src/cipher/Caesar.py	2010-07-12 10:21:55.000000000 -0400
+@@ -0,0 +1,4 @@
++from Rot import Rot
++class Caesar(Rot):
++    def __init__(self): 
++        self.key = 3
+diff -ruN gcipher-1.0-old/src/cipher/Ceasar.py gcipher-1.0/src/cipher/Ceasar.py
+--- gcipher-1.0-old/src/cipher/Ceasar.py	2003-06-20 17:39:01.000000000 -0400
++++ gcipher-1.0/src/cipher/Ceasar.py	1969-12-31 19:00:00.000000000 -0500
+@@ -1,4 +0,0 @@
+-from Rot import Rot
+-class Ceasar(Rot):
+-    def __init__(self): 
+-        self.key = 3
+diff -ruN gcipher-1.0-old/src/cipher/Rot.py gcipher-1.0/src/cipher/Rot.py
+--- gcipher-1.0-old/src/cipher/Rot.py	2003-06-17 14:34:22.000000000 -0400
++++ gcipher-1.0/src/cipher/Rot.py	2010-07-12 10:22:13.000000000 -0400
+@@ -7,7 +7,7 @@
+ 
+ class Rot(CharacterCipher, KeyedCipher):
+ 
+-    """This is the cipher used in Rot7, Rot13, Ceasar's code, etc.
++    """This is the cipher used in Rot7, Rot13, Caesar's code, etc.
+ 
+     This is a simple cipher that simply rotates the characters by an offset.
+     For instance, ab..z -> b..za.
+diff -ruN gcipher-1.0-old/src/ciphergui/Caesar.py gcipher-1.0/src/ciphergui/Caesar.py
+--- gcipher-1.0-old/src/ciphergui/Caesar.py	1969-12-31 19:00:00.000000000 -0500
++++ gcipher-1.0/src/ciphergui/Caesar.py	2010-07-12 10:22:51.000000000 -0400
+@@ -0,0 +1,2 @@
++import cipher.Caesar
++class Caesar(cipher.Caesar.Caesar): pass
+diff -ruN gcipher-1.0-old/src/ciphergui/Ceasar.py gcipher-1.0/src/ciphergui/Ceasar.py
+--- gcipher-1.0-old/src/ciphergui/Ceasar.py	2003-06-20 17:39:30.000000000 -0400
++++ gcipher-1.0/src/ciphergui/Ceasar.py	1969-12-31 19:00:00.000000000 -0500
+@@ -1,2 +0,0 @@
+-import cipher.Ceasar
+-class Ceasar(cipher.Ceasar.Ceasar): pass
+diff -ruN gcipher-1.0-old/src/ciphergui/CipherGUIList.py gcipher-1.0/src/ciphergui/CipherGUIList.py
+--- gcipher-1.0-old/src/ciphergui/CipherGUIList.py	2003-06-20 17:09:49.000000000 -0400
++++ gcipher-1.0/src/ciphergui/CipherGUIList.py	2010-07-12 10:23:21.000000000 -0400
+@@ -14,7 +14,7 @@
+ 
+ cipherGUIList = [
+     ("Gie", "Gie's Code", "_Gie's Code", "A simple cipher doable by hand"),
+-    ("Ceasar", "Ceasar's Code", "_Ceasar's Code", "Julius Ceasar's code"),
++    ("Caesar", "Caesar's Code", "_Caesar's Code", "Julius Caesar's code"),
+     ("Rot", "Rot", "_Rot", "Linear rotation"),
+     ("Vigenere", "Vigenere", "_Vigenere", 
+         "A version of Rot that uses a private key")
