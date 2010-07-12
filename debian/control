@@ -6,6 +6,7 @@ Uploaders: Douglas Gemignani <douglas@gemignani.org>
 Standards-Version: 3.9.0
 Build-Depends: dbs
 Build-Depends-Indep: debhelper (>> 7.0.0), python, python-support (>= 0.4.0)
+Homepage: http://gcipher.sourceforge.net/
 Vcs-Git: git://git.debian.org/collab-maint/gcipher.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/gcipher.git
 
