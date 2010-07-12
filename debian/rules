@@ -3,7 +3,7 @@
 # based on the sample debian/rules file for GNU hello by Ian Jackson.
 
 package=gcipher
-version=1.0
+version=1.1
 
 TAR_DIR := $(package)-$(version)
 
