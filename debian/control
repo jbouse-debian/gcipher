@@ -1,5 +1,5 @@
 Source: gcipher
-Section: comm
+Section: utils
 Priority: optional
 Maintainer: Jeremy T. Bouse <jbouse@debian.org>
 Uploaders: Douglas Gemignani <douglas@gemignani.org>
@@ -9,7 +9,7 @@ Build-Depends-Indep: debhelper (>> 7.0.0), python, python-support (>= 0.4.0)
 
 Package: gcipher
 Architecture: all
-Depends: ${python:Depends}, python-gnome2, python-glade2
+Depends: ${python:Depends}, ${misc:Depends}, python-gnome2, python-glade2
 Description: A simple "encryption" tool
  This is a simple "encryption" tool to work with common simple encryption
  algorithms (ROT13, Caesar, Vigenère, ...)

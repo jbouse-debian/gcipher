@@ -1,2 +1,2 @@
-?package(gcipher):needs=text section=Apps/Tools \
+?package(gcipher):needs="text" section="Applications/Education" \
   title="gCipher" command="/usr/bin/gcipher"
