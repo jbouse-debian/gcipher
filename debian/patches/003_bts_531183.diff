@@ -1,0 +1,23 @@
+diff -ruN gcipher-1.0-old/src/LibGladeApplication.py gcipher-1.0/src/LibGladeApplication.py
+--- gcipher-1.0-old/src/LibGladeApplication.py	2003-06-06 11:15:07.000000000 -0400
++++ gcipher-1.0/src/LibGladeApplication.py	2010-07-12 10:30:42.000000000 -0400
+@@ -61,5 +61,5 @@
+             (self.__class__.__name__, name))
+ 
+     def on_quit_activate(self, *args):
+-        """Ignore args and call gtk.mainquit()."""
+-        gtk.mainquit()
++        """Ignore args and call gtk.main_quit()."""
++        gtk.main_quit()
+diff -ruN gcipher-1.0-old/src/MainCLI.py gcipher-1.0/src/MainCLI.py
+--- gcipher-1.0-old/src/MainCLI.py	2003-06-19 18:57:49.000000000 -0400
++++ gcipher-1.0/src/MainCLI.py	2010-07-12 10:30:05.000000000 -0400
+@@ -31,7 +31,7 @@
+         from MainGUI import MainGUI
+         gnome.program_init(Const.NAME, Const.VERSION)
+         MainGUI()
+-        gtk.mainloop() 
++        gtk.main() 
+ 
+     def _runCommandLineApplication(self):
+         """Run as a command-line application.
