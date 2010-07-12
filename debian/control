@@ -1,0 +1,19 @@
+Source: gcipher
+Section: comm
+Priority: optional
+Maintainer: Jeremy T. Bouse <jbouse@debian.org>
+Standards-Version: 3.7.2
+Build-Depends-Indep: debhelper (>> 3.0.0), dbs, python-dev, python-support (>= 0.4.0)
+
+Package: gcipher
+Architecture: all
+Depends: ${python:Depends}, python-gnome2, python-glade2
+Description: A simple "encryption" tool
+ This is a simple "encryption" tool to work with common simple encryption
+ algorithms (ROT13, Caesar, Vigenère, ...)
+ .
+ Gcipher does not provide any strong encryption and should not be used to
+ encrypt any private data.
+ . 
+ Gcipher can run as either a GUI, a command-line application, or a network
+ proxy.

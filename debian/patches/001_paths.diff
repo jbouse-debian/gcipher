@@ -1,0 +1,21 @@
+diff -urN gcipher-1.0/src/gcipher gcipher-1.0.new/src/gcipher
+--- gcipher-1.0/src/gcipher	2003-06-21 19:37:15.000000000 +0000
++++ gcipher-1.0.new/src/gcipher	2003-06-23 18:03:27.000000000 +0000
+@@ -4,7 +4,7 @@
+ 
+ # Edit the path below if you need to port GCipher.
+ import sys
+-# sys.path.append("/usr/share/gcipher/lib")
++sys.path.append("/usr/share/gcipher/lib")
+ 
+ from os import environ 
+ from os.path import join
+diff -urN gcipher-1.0/src/Const.py gcipher-1.0.new/src/Const.py
+--- gcipher-1.0/src/Const.py	2003-06-21 17:37:31.000000000 +0000
++++ gcipher-1.0.new/src/Const.py	2003-06-23 18:19:35.000000000 +0000
+@@ -9,4 +9,4 @@
+ Read Help/Contents to learn how to use gcipher
+ as a command line filter or as a network proxy."""
+ AUTHORS = ["Shannon -jj Behrens <jjinux@yahoo.com>"]
+-GLADEDIR = "."
++GLADEDIR = "/usr/share/gcipher/lib"

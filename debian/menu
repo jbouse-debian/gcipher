@@ -1,0 +1,2 @@
+?package(gcipher):needs=text section=Apps/Tools \
+  title="gCipher" command="/usr/bin/gcipher"

@@ -1,0 +1,8 @@
+usr/bin
+usr/share/doc/gcipher
+usr/share/man/man1
+usr/share/applications
+usr/share/gcipher/lib/cipher
+usr/share/gcipher/lib/ciphergui
+usr/share/gcipher/plugins/cipher
+usr/share/gcipher/plugins/ciphergui
