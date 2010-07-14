@@ -1,3 +1,14 @@
+gcipher (1.1-1) unstable; urgency=low
+
+  * debian/control: Add Homepage
+  * Imported Upstream version 1.1
+  * debian/patches: Remove patches included upstream
+  * debian/patches: Updated 001_paths patch to new version
+  * debian/rules: Updated package version number
+  * debian/watch: Initial run at watch file
+
+ -- Jeremy T. Bouse <jbouse@debian.org>  Tue, 13 Jul 2010 22:08:33 -0400
+
 gcipher (1.0-4) unstable; urgency=low
 
   * debian/patches/002_bts_532130.diff: Correct spelling of Ceasar to
